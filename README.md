@@ -70,3 +70,9 @@ rspec
 ```
 rails g model User provider:string default: "system" uid:string default: "system" name:string email:string image:string password_digest:string role:string default: "client" && rails g model Home detail
 ```
+5. Add model validations
+6. Add Controllers
+```
+rails g controller sessions new && rails g controller home index
+```
+7. Update routes
