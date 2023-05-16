@@ -80,3 +80,5 @@ rails g controller sessions new && rails g controller home index
 ```
 rails db:create db:migrate && bin/dev
 ```
+9. Go to localhost:3000
+10. Add omniauth gem
