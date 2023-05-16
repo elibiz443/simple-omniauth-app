@@ -1,8 +1,4 @@
-# spec/support/factory_bot.rb
+# spec/factories.rb
 
-require 'factory_bot'
-
-RSpec.configure do |config|
-  config.include FactoryBot::Syntax::Methods
-  FactoryBot.find_definitions
+FactoryBot.define do
 end
