@@ -1,6 +1,12 @@
 # SIMPLE-OMNIAUTH-APP
 This is a simple omniauth app that involve signup/signin via facebook and google. The steps are clearly shown from start to finish.
 
+Get started with the app:
+```
+git clone git@github.com:elibiz443/simple-omniauth-app.git && cd simple-omniauth-app && rails db:create db:migrate && bundle && bin/dev
+```
+###### NB// Make sure you update config/database.yml file with your own username and password
+
 ____
 #### Requirements:
 ____
@@ -82,6 +88,18 @@ rails db:create db:migrate && bin/dev
 ```
 9. Go to localhost:3000
 10. Add omniauth gem
+----> Create Google and Facebook projects and fetch their API keys and secrets here.
+Starting point to a new google project:
+```
+ https://console.cloud.google.com
+ ```
+ * Create Project
+ * Go to APIs & Services > Oauth consent screen and choose External.
+ * Next is go to APIs & Services > Credentials. At the top click CREATE CREDENTIALS and choose OAuth client ID.
+ * Choose Web application as Application type.
+ * Then add the callback URL to Authorized redirect URIs.
+ * Then click Create. After creation, there should be a popup showing your client id and client secret. Save it for later use.
+
 11. Add config/initializers/omniauth.rb file and update it as follows:
 ```
 OmniAuth.config.logger = Rails.logger
@@ -110,3 +128,10 @@ FACEBOOK:
   FACEBOOK_SECRET: your_facebook_secret
 ```
 12. Fire Up The Front-end
+13. Write tests
+
+###### That's it. Voilà. Happy coding 🙌 
+
+##### Contacts:
+* Email: elibiz443@gmail.com
+* Phone/WhatsApp: +254768998781
