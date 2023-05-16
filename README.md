@@ -69,5 +69,4 @@ rspec
 4. create models
 ```
 rails g model User provider:string default: "system" uid:string default: "system" name:string email:string image:string password_digest:string role:string default: "client" && rails g model Home detail
-
 ```
