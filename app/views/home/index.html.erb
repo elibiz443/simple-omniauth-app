@@ -317,6 +317,11 @@
 
 <!-- Content -->
 <div class="w-full pt-10 px-4 sm:px-6 md:px-8 lg:pl-72">
+  <div class="my-4">
+    <% flash.each do |type, msg| %>
+      <%= content_tag :div, msg, class: build_alert_classes(type) %>
+    <% end %> 
+  </div>
   <!-- Page Heading -->
   <header>
     <p class="mb-2 text-sm font-semibold text-blue-600">Starter Pages & Examples</p>
