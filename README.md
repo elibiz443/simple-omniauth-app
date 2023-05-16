@@ -68,7 +68,7 @@ rspec
 ```
 4. create models
 ```
-rails g model User provider:string default: "system" uid:string default: "system" name:string email:string image:string password_digest:string role:string default: "client" && rails g model Home detail
+rails g model User provider uid name email image password_digest role && rails g model Home detail
 ```
 5. Add model validations
 6. Add Controllers
@@ -76,3 +76,7 @@ rails g model User provider:string default: "system" uid:string default: "system
 rails g controller sessions new && rails g controller home index
 ```
 7. Update routes
+8. Create & migrate DB then start server and tailwind:
+```
+rails db:create db:migrate && bin/dev
+```
