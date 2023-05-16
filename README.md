@@ -109,3 +109,4 @@ FACEBOOK:
   FACEBOOK_KEY: your_facebook_key
   FACEBOOK_SECRET: your_facebook_secret
 ```
+12. Fire Up The Front-end
