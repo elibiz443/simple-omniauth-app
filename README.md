@@ -82,3 +82,30 @@ rails db:create db:migrate && bin/dev
 ```
 9. Go to localhost:3000
 10. Add omniauth gem
+11. Add config/initializers/omniauth.rb file and update it as follows:
+```
+OmniAuth.config.logger = Rails.logger
+
+facebook_key = Rails.application.credentials[:FACEBOOK][:FACEBOOK_KEY]
+facebook_secret = Rails.application.credentials[:FACEBOOK][:FACEBOOK_SECRET]
+google_key = Rails.application.credentials[:GOOGLE][:GOOGLE_KEY]
+google_secret = Rails.application.credentials[:GOOGLE][:GOOGLE_SECRET]
+
+Rails.application.config.middleware.use OmniAuth::Builder do
+  provider :facebook,  facebook_key, facebook_secret
+  provider :google_oauth2, google_key, google_secret
+end
+```
+Use: (To edit Credentials)
+```
+EDITOR="subl --wait" rails credentials:edit
+```
+credentials file should be in the following format:
+```
+GOOGLE:
+  GOOGLE_KEY: your_google_key
+  GOOGLE_SECRET: your_google_secret
+FACEBOOK:
+  FACEBOOK_KEY: your_facebook_key
+  FACEBOOK_SECRET: your_facebook_secret
+```
